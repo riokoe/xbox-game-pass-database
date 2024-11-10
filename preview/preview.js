@@ -1,6 +1,6 @@
 (async () => {
   const client = await initSqlJs({ locateFile: (file) => `https://cdn.jsdelivr.net/npm/sql.js@latest/dist/${file}` });
-  const data = await fetch("../database/data.sql").then(res => res.arrayBuffer());
+  const data = await fetch("https://github.com/riokoe/xbox-game-pass-database/raw/refs/heads/main/database/data.sql").then(res => res.arrayBuffer());
   const db = new client.Database(new Uint8Array(data));
   const [games] = db.exec("SELECT * FROM games LIMIT 50");
   const [localizations] = db.exec("SELECT * FROM localizations LIMIT 50");
