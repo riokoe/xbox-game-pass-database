@@ -1,0 +1,20 @@
+name: Create/update tag
+on:
+  push:
+    branch: "main"
+    path: "database/**"
+    
+jobs:
+  create-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: echo "NEWTAG=v$(date '+%Y%m%d')" >> $GITHUB_ENV
+      - uses: rickstaa/action-create-tag@v1
+        id: "tag_create"
+        with:
+          tag: ${{ env.NEWTAG }}
+          tag_exists_error: false
+          message: "Latest release"
