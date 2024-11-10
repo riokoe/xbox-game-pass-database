@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Database Preview</title>
+  <link href="preview.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/simple-data-table@latest/src/skins/default.css" rel="stylesheet"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="table">
+    <h1>SELECT * FROM games LIMIT 50</h1>
+    <div id="games">
+      <div class="loading">Loading</div>
+    </div>
+  </div>
+  <div class="table">
+    <h1>SELECT * FROM localizations LIMIT 50</h1>
+    <div id="localizations">
+      <div class="loading">Loading</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/sql.js@latest/dist/sql-wasm.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simple-data-table@latest/src/index.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="preview.js"></script>
+</body>
+
+</html>

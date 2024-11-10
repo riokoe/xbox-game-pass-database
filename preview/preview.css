@@ -1,0 +1,64 @@
+html,
+body {
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  color: #ddd;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100px, -100px);
+  width: 200px;
+  height: 200px;
+  background-color: #222;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  line-height: 200px;
+}
+
+.table {
+  max-width: calc(100% - 30px);
+  padding: 10px;
+  margin: 20px;
+  background-color: #333;
+  border-radius: 10px;
+}
+
+#games,
+#localizations {
+  position: relative;
+  min-height: 450px;
+  max-height: 450px;
+}
+
+.table .simple-data-table {
+  overflow: auto;
+  max-height: 450px;
+}
+
+.table .simple-data-table th {
+  background-color: #555;
+  padding: 7px 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 145px;
+  overflow: hidden;
+}
+
+.table .simple-data-table input {
+  border: 1px solid #777;
+  color: #bbb;
+}
